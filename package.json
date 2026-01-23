@@ -4,17 +4,13 @@
   "private": true,
   "description": "OpenCode WebUI Monorepo - Frontend application + Node.js server skeleton",
   "type": "module",
-  "packageManager": "pnpm@9.0.0",
   "scripts": {
-    "dev": "pnpm --filter web dev",
-    "dev:server": "pnpm --filter server dev",
-    "build": "pnpm --filter web build && pnpm --filter server build",
-    "build:web": "pnpm --filter web build",
-    "build:server": "pnpm --filter server build",
-    "lint": "pnpm -r run lint",
-    "lint:fix": "pnpm -r run lint:fix",
+    "dev": "cd apps/web && yarn dev",
+    "dev:server": "cd apps/server && yarn dev",
+    "build": "cd apps/web && yarn build && cd ../server && yarn build",
+    "build:web": "cd apps/web && yarn build",
+    "build:server": "cd apps/server && yarn build",
     "format": "prettier --write .",
-    "test": "pnpm -r run test",
     "validate:sc": "tsx apps/web/scripts/validate-success-criteria.ts"
   },
   "devDependencies": {
@@ -25,7 +21,6 @@
     "tsx": "^4.19.0"
   },
   "engines": {
-    "node": ">=18.0.0",
-    "pnpm": ">=9.0.0"
+    "node": ">=18.0.0"
   }
 }

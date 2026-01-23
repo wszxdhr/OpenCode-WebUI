@@ -12,7 +12,6 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@sysui/opencode-webui-shared": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
