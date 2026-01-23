@@ -42,6 +42,10 @@
 - 更新 `.github/ISSUE_TEMPLATE/bug_report.yml`，使用更详细的标准模板，支持桌面和移动端环境信息收集
 - 更新 `.github/ISSUE_TEMPLATE/feature_request.yml`，使用更详细的标准模板，引导用户提供完整的功能请求信息
 - 验证 ESLint、Prettier、Jest 测试和构建流程，确保配置正确
+- 从 pnpm 迁移到 yarn 包管理器，简化依赖管理
+- 移除共享包依赖，使用本地类型定义替代
+- 删除旧的 src 目录和 packages/shared 目录
+- 优化布局组件中的特殊字符显示
 
 ### 0.1.0 (2025-11-16)
 
