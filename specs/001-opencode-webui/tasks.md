@@ -88,7 +88,7 @@ description: 'Task list for OpenCode WebUI Monorepo'
 - [X] T032 [US2] Add right sidebar placeholder `OpenCode-WebUI/apps/web/src/components/RightSidebar.tsx`
 - [X] T033 [US2] Add layout styles `OpenCode-WebUI/apps/web/src/styles/layout.css`
 
-**Checkpoint**: User Story 2 可独立完成并验证
+**Checkpoint**: User Story 2 完成 ✅
 
 ---
 
@@ -106,7 +106,7 @@ description: 'Task list for OpenCode WebUI Monorepo'
 - [X] T037 [US3] Wire send message API `OpenCode-WebUI/apps/web/src/services/opencodeClient.ts`
 - [X] T038 [US3] Apply WebSocket message updates `OpenCode-WebUI/apps/web/src/services/eventStream.ts`
 
-**Checkpoint**: User Story 3 可独立完成并验证
+**Checkpoint**: User Story 3 完成 ✅
 
 ---
 
@@ -114,7 +114,7 @@ description: 'Task list for OpenCode WebUI Monorepo'
 
 **Purpose**: 跨故事优化与合规检查
 
- - [X] T039 [P] Add shared empty/loading UI `OpenCode-WebUI/apps/web/src/components/EmptyState.tsx`
+- [X] T039 [P] Add shared empty/loading UI `OpenCode-WebUI/apps/web/src/components/EmptyState.tsx`
 - [X] T040 [P] Ensure strict type safety `OpenCode-WebUI/tsconfig.base.json`
 - [X] T041 Document unauthenticated server skeleton in `OpenCode-WebUI/apps/server/src/app.ts`
 - [X] T042 Add success criteria checks (SC-001~SC-004) `specs/001-opencode-webui/quickstart.md`
@@ -123,6 +123,18 @@ description: 'Task list for OpenCode WebUI Monorepo'
 - [X] T045 Run quickstart validation checklist in `specs/001-opencode-webui/quickstart.md`
 
 **Notes**: 自动验收脚本先提供占位与接口约定，后续按实现完善指标采集。
+
+---
+
+## Final Status: ✅ ALL PHASES COMPLETED
+
+**Summary**:
+- ✅ Phase 1: Setup (T001-T004)
+- ✅ Phase 2: Foundational (T005-T020c)
+- ✅ Phase 3: User Story 1 - 连接到服务器并看到会话列表 (T021-T028)
+- ✅ Phase 4: User Story 2 - 在三栏布局中浏览与折叠侧边栏 (T029-T033)
+- ✅ Phase 5: User Story 3 - 查看会话内容并输入消息 (T034-T038)
+- ✅ Phase 6: Polish & Cross-Cutting Concerns (T039-T045)
 
 ---
 
