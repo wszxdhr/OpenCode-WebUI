@@ -24,7 +24,7 @@ export function MainLayout({
       <aside className={`left-sidebar ${leftCollapsed ? 'collapsed' : ''}`}>
         {leftSidebarContent}
         <button className='collapse-button left' onClick={toggleLeft}>
-          {leftCollapsed ? '›' : '‹'}
+          {leftCollapsed ? '&gt;' : '&lt;'}
         </button>
       </aside>
 
@@ -33,7 +33,7 @@ export function MainLayout({
       {rightSidebarContent && (
         <aside className={`right-sidebar ${rightCollapsed ? 'collapsed' : ''}`}>
           <button className='collapse-button right' onClick={toggleRight}>
-            {rightCollapsed ? '‹' : '›'}
+            {rightCollapsed ? '&lt;' : '&gt;'}
           </button>
           {rightSidebarContent}
         </aside>
