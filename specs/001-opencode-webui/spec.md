@@ -4,18 +4,19 @@
 **Created**: 2026-01-23  
 **Status**: Draft  
 **Input**: User description: "创建一个 monorepo，由前端和 NodeJs 组成。
-前端项目使用  TS + React，参考 OpenCode 的 WebUI，布局为左中右结构，左和右侧边栏可以伸缩，左侧为项目、Session、设置 视图，右侧为 代码视图，中间为当前 Session 展示，右侧先留一个 Placeholder，后面需求再实现，前端界面刚开始初始化首页显示连接选项，让用户输入要连接的 Server，输入后连接，接入 OpenCode 的 Server，然后 左侧显示当前 OpenCode 的所有 Session，以 项目名（项目文件夹名）为 Group，点击 Session 在中间栏显示 Session 的内容，中间栏底部显示输入框，用来输入内容
- NodeJs 部分暂时留空"
+前端项目使用 TS + React，参考 OpenCode 的 WebUI，布局为左中右结构，左和右侧边栏可以伸缩，左侧为项目、Session、设置 视图，右侧为 代码视图，中间为当前 Session 展示，右侧先留一个 Placeholder，后面需求再实现，前端界面刚开始初始化首页显示连接选项，让用户输入要连接的 Server，输入后连接，接入 OpenCode 的 Server，然后 左侧显示当前 OpenCode 的所有 Session，以 项目名（项目文件夹名）为 Group，点击 Session 在中间栏显示 Session 的内容，中间栏底部显示输入框，用来输入内容
+NodeJs 部分暂时留空"
 
 ## Clarifications
 
 ### Session 2026-01-23
+
 - Q: 连接 OpenCode 服务器是否需要认证？ → A: 无认证，直接连接
 - Q: 服务器地址允许的协议？ → A: 允许 http/https，由用户输入
 - Q: 客户端与 OpenCode 服务器的通信方式？ → A: HTTP(S) + WebSocket 并存
 - Q: 断线重连策略？ → A: 断线后手动重连
 
-## User Scenarios & Testing *(mandatory)*
+## User Scenarios & Testing _(mandatory)_
 
 ### User Story 1 - 连接到服务器并看到会话列表 (Priority: P1)
 
@@ -70,7 +71,7 @@
 - 会话内容体量较大时，渲染不阻塞页面交互
 - 连接中断时，用户能看到断开状态并可手动重新连接
 
-## Requirements *(mandatory)*
+## Requirements _(mandatory)_
 
 ### Architecture & Stack Constraints
 
@@ -98,14 +99,14 @@
 - 用户原始需求中提及的技术栈细节仅作为实现参考，不影响本规格的目标与验收
 - 前端需要与 Node 服务建立最小集成（健康检查/元信息接口），用于满足单仓边界与接口稳定性要求
 
-### Key Entities *(include if feature involves data)*
+### Key Entities _(include if feature involves data)_
 
 - **Server Connection**: 表示连接目标与状态（地址、协议类型、连接状态、错误信息、通信方式）
 - **Project**: 表示会话所属项目（项目名、包含的会话集合）
 - **Session**: 表示单个会话（会话标识、标题、更新时间、内容摘要）
 - **Message**: 表示会话中的消息（发送者类型、内容、时间顺序）
 
-## Success Criteria *(mandatory)*
+## Success Criteria _(mandatory)_
 
 ### Measurable Outcomes
 
