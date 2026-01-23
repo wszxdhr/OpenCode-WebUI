@@ -1,5 +1,21 @@
 ## [UnReleased]
 
+### 功能
+- 搭建 OpenCode WebUI Monorepo 基础结构
+  - 创建 monorepo 目录：apps/web、apps/server、packages/shared
+  - 配置 pnpm workspace 和根 package.json
+  - 添加基础 TypeScript 配置（严格类型安全）
+  - 搭建 shared 包：类型定义和 API 客户端封装
+  - 搭建 web 应用：React + Vite + TypeScript
+  - 搭建 server 服务：Koa 骨架 + 健康检查端点
+- 实现 User Story 1（MVP）：连接到服务器并查看会话列表
+  - 创建连接页面，支持输入服务器地址
+  - 实现连接错误分类（invalid URL/unreachable/server error）
+  - 添加会话列表组件，按项目分组显示
+  - 实现左侧边栏，展示项目和会话
+  - 添加连接状态管理和错误处理
+  - 支持断开连接功能
+
 ### 优化
 - 使用 typescript-project-starter skill 优化项目配置
 - 新增 `prettier.config.cjs` 配置文件，统一代码格式化规范

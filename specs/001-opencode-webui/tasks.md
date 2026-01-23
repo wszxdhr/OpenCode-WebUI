@@ -15,10 +15,10 @@ description: 'Task list for OpenCode WebUI Monorepo'
 
 **Purpose**: 项目初始化与基础结构搭建
 
-- [ ] T001 Create monorepo directories at `OpenCode-WebUI/apps/web`, `OpenCode-WebUI/apps/server`, `OpenCode-WebUI/packages/shared`
-- [ ] T002 Add workspace config `OpenCode-WebUI/pnpm-workspace.yaml`
-- [ ] T003 Add root package manifest `OpenCode-WebUI/package.json`
-- [ ] T004 Add base TypeScript config `OpenCode-WebUI/tsconfig.base.json`
+ - [X] T001 Create monorepo directories at `OpenCode-WebUI/apps/web`, `OpenCode-WebUI/apps/server`, `OpenCode-WebUI/packages/shared`
+ - [X] T002 Add workspace config `OpenCode-WebUI/pnpm-workspace.yaml`
+ - [X] T003 Add root package manifest `OpenCode-WebUI/package.json`
+ - [X] T004 Add base TypeScript config `OpenCode-WebUI/tsconfig.base.json`
 
 ---
 
@@ -26,26 +26,26 @@ description: 'Task list for OpenCode WebUI Monorepo'
 
 **Purpose**: 所有用户故事实现的前置基础设施
 
-- [ ] T005 [P] Scaffold shared package manifest `OpenCode-WebUI/packages/shared/package.json`
-- [ ] T006 [P] Add shared package entry `OpenCode-WebUI/packages/shared/src/index.ts`
-- [ ] T007 [P] Scaffold web app manifest `OpenCode-WebUI/apps/web/package.json`
-- [ ] T008 [P] Add Vite config `OpenCode-WebUI/apps/web/vite.config.ts`
-- [ ] T009 [P] Add web TypeScript config `OpenCode-WebUI/apps/web/tsconfig.json`
-- [ ] T010 [P] Add web HTML entry `OpenCode-WebUI/apps/web/index.html`
-- [ ] T011 [P] Add web bootstrap `OpenCode-WebUI/apps/web/src/main.tsx`
-- [ ] T012 [P] Add web app shell `OpenCode-WebUI/apps/web/src/App.tsx`
-- [ ] T013 [P] Scaffold server manifest `OpenCode-WebUI/apps/server/package.json`
-- [ ] T014 [P] Add server TypeScript config `OpenCode-WebUI/apps/server/tsconfig.json`
-- [ ] T015 [P] Add Koa skeleton (no auth) `OpenCode-WebUI/apps/server/src/app.ts`
-- [ ] T016a Add health/meta endpoint `GET /health` `OpenCode-WebUI/apps/server/src/routes/health.ts`
-- [ ] T016b Wire health route into Koa app `OpenCode-WebUI/apps/server/src/app.ts`
-- [ ] T017 Add OpenCode API types `OpenCode-WebUI/packages/shared/src/opencode.ts`
-- [ ] T018 Add API client wrapper `OpenCode-WebUI/apps/web/src/services/opencodeClient.ts`
-- [ ] T019 Add WebSocket event stream wrapper `OpenCode-WebUI/apps/web/src/services/eventStream.ts`
-- [ ] T020 Add session/connection store `OpenCode-WebUI/apps/web/src/store/sessionStore.ts`
-- [ ] T020a Add health check client `OpenCode-WebUI/apps/web/src/services/healthClient.ts`
-- [ ] T020b Add shared type imports via path alias `OpenCode-WebUI/apps/web/tsconfig.json`
-- [ ] T020c Use health check to validate Node service availability `OpenCode-WebUI/apps/web/src/services/healthClient.ts`
+ - [X] T005 [P] Scaffold shared package manifest `OpenCode-WebUI/packages/shared/package.json`
+ - [X] T006 [P] Add shared package entry `OpenCode-WebUI/packages/shared/src/index.ts`
+ - [X] T007 [P] Scaffold web app manifest `OpenCode-WebUI/apps/web/package.json`
+ - [X] T008 [P] Add Vite config `OpenCode-WebUI/apps/web/vite.config.ts`
+ - [X] T009 [P] Add web TypeScript config `OpenCode-WebUI/apps/web/tsconfig.json`
+ - [X] T010 [P] Add web HTML entry `OpenCode-WebUI/apps/web/index.html`
+ - [X] T011 [P] Add web bootstrap `OpenCode-WebUI/apps/web/src/main.tsx`
+ - [X] T012 [P] Add web app shell `OpenCode-WebUI/apps/web/src/App.tsx`
+ - [X] T013 [P] Scaffold server manifest `OpenCode-WebUI/apps/server/package.json`
+ - [X] T014 [P] Add server TypeScript config `OpenCode-WebUI/apps/server/tsconfig.json`
+ - [X] T015 [P] Add Koa skeleton (no auth) `OpenCode-WebUI/apps/server/src/app.ts`
+ - [X] T016a Add health/meta endpoint `GET /health` `OpenCode-WebUI/apps/server/src/routes/health.ts`
+ - [X] T016b Wire health route into Koa app `OpenCode-WebUI/apps/server/src/app.ts`
+ - [X] T017 Add OpenCode API types `OpenCode-WebUI/packages/shared/src/opencode.ts`
+ - [X] T018 Add API client wrapper `OpenCode-WebUI/apps/web/src/services/opencodeClient.ts`
+ - [X] T019 Add WebSocket event stream wrapper `OpenCode-WebUI/apps/web/src/services/eventStream.ts`
+ - [X] T020 Add session/connection store `OpenCode-WebUI/apps/web/src/store/sessionStore.ts`
+ - [X] T020a Add health check client `OpenCode-WebUI/apps/web/src/services/healthClient.ts`
+ - [X] T020b Add shared type imports via path alias `OpenCode-WebUI/apps/web/tsconfig.json`
+ - [X] T020c Use health check to validate Node service availability `OpenCode-WebUI/apps/web/src/services/healthClient.ts`
 
 **Checkpoint**: Foundation ready — user stories can begin
 
@@ -59,16 +59,16 @@ description: 'Task list for OpenCode WebUI Monorepo'
 
 ### Implementation for User Story 1
 
-- [ ] T021 [US1] Create connect page `OpenCode-WebUI/apps/web/src/pages/ConnectPage.tsx`
-- [ ] T022 [P] [US1] Add connect page styles `OpenCode-WebUI/apps/web/src/styles/connect.css`
-- [ ] T023 [US1] Wire connect flow to store `OpenCode-WebUI/apps/web/src/store/sessionStore.ts`
-- [ ] T023a [US1] Add connection error classification (invalid URL/unreachable/server error) `OpenCode-WebUI/apps/web/src/store/sessionStore.ts`
-- [ ] T023b [US1] Render connection error messaging with retry guidance `OpenCode-WebUI/apps/web/src/pages/ConnectPage.tsx`
-- [ ] T024 [P] [US1] Add session grouping helper `OpenCode-WebUI/apps/web/src/utils/groupSessions.ts`
-- [ ] T025 [US1] Build session list component `OpenCode-WebUI/apps/web/src/components/SessionList.tsx`
-- [ ] T026 [US1] Render left sidebar with sessions `OpenCode-WebUI/apps/web/src/components/LeftSidebar.tsx`
-- [ ] T027 [US1] Handle error/empty states in list `OpenCode-WebUI/apps/web/src/components/SessionList.tsx`
-- [ ] T028 [US1] Switch connect vs main screen `OpenCode-WebUI/apps/web/src/App.tsx`
+ - [X] T021 [US1] Create connect page `OpenCode-WebUI/apps/web/src/pages/ConnectPage.tsx`
+ - [X] T022 [P] [US1] Add connect page styles `OpenCode-WebUI/apps/web/src/styles/connect.css`
+ - [X] T023 [US1] Wire connect flow to store `OpenCode-WebUI/apps/web/src/store/sessionStore.ts`
+ - [X] T023a [US1] Add connection error classification (invalid URL/unreachable/server error) `OpenCode-WebUI/apps/web/src/store/sessionStore.ts`
+ - [X] T023b [US1] Render connection error messaging with retry guidance `OpenCode-WebUI/apps/web/src/pages/ConnectPage.tsx`
+ - [X] T024 [P] [US1] Add session grouping helper `OpenCode-WebUI/apps/web/src/store/sessionStore.ts`
+ - [X] T025 [US1] Build session list component `OpenCode-WebUI/apps/web/src/components/SessionList.tsx`
+ - [X] T026 [US1] Render left sidebar with sessions `OpenCode-WebUI/apps/web/src/components/LeftSidebar.tsx`
+ - [X] T027 [US1] Handle error/empty states in list `OpenCode-WebUI/apps/web/src/components/SessionList.tsx`
+ - [X] T028 [US1] Switch connect vs main screen `OpenCode-WebUI/apps/web/src/App.tsx`
 
 **Checkpoint**: User Story 1 可独立完成并验证
 
