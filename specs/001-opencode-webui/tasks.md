@@ -82,11 +82,11 @@ description: 'Task list for OpenCode WebUI Monorepo'
 
 ### Implementation for User Story 2
 
-- [ ] T029 [US2] Create main layout container `OpenCode-WebUI/apps/web/src/layout/MainLayout.tsx`
-- [ ] T030 [P] [US2] Add collapsible sidebar state `OpenCode-WebUI/apps/web/src/layout/MainLayout.tsx`
-- [ ] T031 [P] [US2] Add left view tabs `OpenCode-WebUI/apps/web/src/components/LeftNav.tsx`
-- [ ] T032 [US2] Add right sidebar placeholder `OpenCode-WebUI/apps/web/src/components/RightSidebar.tsx`
-- [ ] T033 [US2] Add layout styles `OpenCode-WebUI/apps/web/src/styles/layout.css`
+ - [X] T029 [US2] Create main layout container `OpenCode-WebUI/apps/web/src/layout/MainLayout.tsx`
+- [X] T030 [P] [US2] Add collapsible sidebar state `OpenCode-WebUI/apps/web/src/layout/MainLayout.tsx`
+- [X] T031 [P] [US2] Add left view tabs `OpenCode-WebUI/apps/web/src/components/LeftNav.tsx`
+- [X] T032 [US2] Add right sidebar placeholder `OpenCode-WebUI/apps/web/src/components/RightSidebar.tsx`
+- [X] T033 [US2] Add layout styles `OpenCode-WebUI/apps/web/src/styles/layout.css`
 
 **Checkpoint**: User Story 2 可独立完成并验证
 
@@ -100,11 +100,11 @@ description: 'Task list for OpenCode WebUI Monorepo'
 
 ### Implementation for User Story 3
 
-- [ ] T034 [US3] Add message list component `OpenCode-WebUI/apps/web/src/components/MessageList.tsx`
-- [ ] T035 [US3] Fetch messages on session select `OpenCode-WebUI/apps/web/src/store/sessionStore.ts`
-- [ ] T036 [P] [US3] Add message input component `OpenCode-WebUI/apps/web/src/components/MessageInput.tsx`
-- [ ] T037 [US3] Wire send message API `OpenCode-WebUI/apps/web/src/services/opencodeClient.ts`
-- [ ] T038 [US3] Apply WebSocket message updates `OpenCode-WebUI/apps/web/src/services/eventStream.ts`
+ - [X] T034 [US3] Add message list component `OpenCode-WebUI/apps/web/src/components/MessageList.tsx`
+- [X] T035 [US3] Fetch messages on session select `OpenCode-WebUI/apps/web/src/store/sessionStore.ts`
+- [X] T036 [P] [US3] Add message input component `OpenCode-WebUI/apps/web/src/components/MessageInput.tsx`
+- [X] T037 [US3] Wire send message API `OpenCode-WebUI/apps/web/src/services/opencodeClient.ts`
+- [X] T038 [US3] Apply WebSocket message updates `OpenCode-WebUI/apps/web/src/services/eventStream.ts`
 
 **Checkpoint**: User Story 3 可独立完成并验证
 
@@ -114,13 +114,13 @@ description: 'Task list for OpenCode WebUI Monorepo'
 
 **Purpose**: 跨故事优化与合规检查
 
-- [ ] T039 [P] Add shared empty/loading UI `OpenCode-WebUI/apps/web/src/components/EmptyState.tsx`
-- [ ] T040 [P] Ensure strict type safety `OpenCode-WebUI/tsconfig.base.json`
-- [ ] T041 Document unauthenticated server skeleton in `OpenCode-WebUI/apps/server/src/app.ts`
-- [ ] T042 Add success criteria checks (SC-001~SC-004) `specs/001-opencode-webui/quickstart.md`
-- [ ] T043 Add automated SC-001/SC-002 validation script placeholder `OpenCode-WebUI/apps/web/scripts/validate-success-criteria.ts`
-- [ ] T044 Wire script into root npm scripts `OpenCode-WebUI/package.json`
-- [ ] T045 Run quickstart validation checklist in `specs/001-opencode-webui/quickstart.md`
+ - [X] T039 [P] Add shared empty/loading UI `OpenCode-WebUI/apps/web/src/components/EmptyState.tsx`
+- [X] T040 [P] Ensure strict type safety `OpenCode-WebUI/tsconfig.base.json`
+- [X] T041 Document unauthenticated server skeleton in `OpenCode-WebUI/apps/server/src/app.ts`
+- [X] T042 Add success criteria checks (SC-001~SC-004) `specs/001-opencode-webui/quickstart.md`
+- [X] T043 Add automated SC-001/SC-002 validation script placeholder `OpenCode-WebUI/apps/web/scripts/validate-success-criteria.ts`
+- [X] T044 Wire script into root npm scripts `OpenCode-WebUI/package.json`
+- [X] T045 Run quickstart validation checklist in `specs/001-opencode-webui/quickstart.md`
 
 **Notes**: 自动验收脚本先提供占位与接口约定，后续按实现完善指标采集。
 

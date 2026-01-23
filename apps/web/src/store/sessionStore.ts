@@ -3,9 +3,10 @@ import type {
   ServerConnection,
   Project,
   SessionSummary,
-  ConnectionError
+  ConnectionError,
+  Message
 } from '@sysui/shared'
-import type { OpenCodeClient } from './services/opencodeClient'
+import type { OpenCodeClient, MessageEnvelope } from './services/opencodeClient'
 
 export function useSessionStore(client: OpenCodeClient) {
   const [connection, setConnection] = useState<ServerConnection | null>(null)
@@ -15,6 +16,8 @@ export function useSessionStore(client: OpenCodeClient) {
   )
   const [connectionError, setConnectionError] =
     useState<ConnectionError | null>(null)
+  const [messages, setMessages] = useState<Message[]>([])
+  const [isMessagesLoading, setIsMessagesLoading] = useState(false)
 
   const connect = useCallback(
     async (serverUrl: string) => {
@@ -51,17 +54,69 @@ export function useSessionStore(client: OpenCodeClient) {
     setConnection(null)
     setProjects([])
     setSelectedSessionId(null)
+    setMessages([])
+    setIsMessagesLoading(false)
     setConnectionError(null)
   }, [client])
+
+  const fetchMessages = useCallback(
+    async (sessionId: string) => {
+      setIsMessagesLoading(true)
+      try {
+        const messageEnvelopes = await client.getMessages(sessionId)
+        const messages: Message[] = messageEnvelopes.map((envelope) => ({
+          id: envelope.info.id,
+          sessionId: envelope.info.sessionID,
+          sender:
+            envelope.info.role === 'user'
+              ? 'user'
+              : envelope.info.role === 'assistant'
+                ? 'assistant'
+                : 'system',
+          content: envelope.parts[0]?.text || '',
+          createdAt: new Date(envelope.info.time.created * 1000).toISOString(),
+          order: envelope.info.time.created
+        }))
+        setMessages(messages)
+      } catch (error) {
+        console.error('Failed to fetch messages:', error)
+      } finally {
+        setIsMessagesLoading(false)
+      }
+    },
+    [client]
+  )
+
+  const sendMessage = useCallback(
+    async (sessionId: string, content: string) => {
+      try {
+        await client.sendMessage(sessionId, {
+          messageID: crypto.randomUUID(),
+          providerID: 'default',
+          modelID: 'default',
+          mode: 'default',
+          parts: [{ type: 'text', text: content }]
+        })
+      } catch (error) {
+        console.error('Failed to send message:', error)
+        throw error
+      }
+    },
+    [client]
+  )
 
   return {
     connection,
     projects,
     selectedSessionId,
+    messages,
+    isMessagesLoading,
     connectionError,
     connect,
     disconnect,
-    setSelectedSessionId
+    setSelectedSessionId,
+    fetchMessages,
+    sendMessage
   }
 }
 

@@ -15,13 +15,14 @@
     "lint:fix": "pnpm -r run lint:fix",
     "format": "prettier --write .",
     "test": "pnpm -r run test",
-    "validate:sc": "node apps/web/scripts/validate-success-criteria.ts"
+    "validate:sc": "tsx apps/web/scripts/validate-success-criteria.ts"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
     "prettier": "^3.3.3",
     "prettier-config-standard": "^7.0.0",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "tsx": "^4.19.0"
   },
   "engines": {
     "node": ">=18.0.0",

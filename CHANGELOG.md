@@ -1,6 +1,25 @@
 ## [UnReleased]
 
 ### 功能
+- 实现 User Story 2（三栏布局与侧边栏折叠）
+  - 创建主布局容器 MainLayout
+  - 添加可折叠的左右侧边栏
+  - 实现左侧导航标签（项目/会话/设置）
+  - 添加右侧边栏占位符（代码视图）
+  - 添加完整的布局样式
+- 实现 User Story 3（查看会话内容并输入消息）
+  - 添加消息列表组件，支持按发送者分组（用户/助手/系统）
+  - 添加消息输入组件，支持发送消息
+  - 实现消息获取功能（选择会话时加载）
+  - 实现发送消息 API 封装
+  - 添加共享空状态/加载 UI 组件
+- 完善 quickstart.md
+  - 添加成功标准检查（SC-001~SC-004）
+  - 添加验证步骤和清单
+- 添加自动化验证脚本占位符
+  - 连接验证脚本到 npm scripts
+- 在 server app.ts 中记录未认证服务器骨架
+- TypeScript 严格类型安全配置（已有）
 - 搭建 OpenCode WebUI Monorepo 基础结构
   - 创建 monorepo 目录：apps/web、apps/server、packages/shared
   - 配置 pnpm workspace 和根 package.json
