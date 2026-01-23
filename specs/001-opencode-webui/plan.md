@@ -23,7 +23,7 @@
 
 ## Constitution Check
 
-*GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
+_GATE: Must pass before Phase 0 research. Re-check after Phase 1 design._
 
 - Monorepo boundaries respected; frontend/backend interfaces documented
 - Type safety enforced (no `any`, no type suppression)
@@ -68,8 +68,8 @@ OpenCode-WebUI/
 > **Fill ONLY if Constitution Check has violations that must be justified**
 
 | Violation | Why Needed | Simpler Alternative Rejected Because |
-|-----------|------------|-------------------------------------|
-| N/A | N/A | N/A |
+| --------- | ---------- | ------------------------------------ |
+| N/A       | N/A        | N/A                                  |
 
 ## Phase 0: Outline & Research
 

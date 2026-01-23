@@ -1,8 +1,17 @@
+# 默认设置为 false，强制用户从模板中选择，而不是创建空白 issue
+# Set to false to force users to select from templates, rather than creating blank issues
 blank_issues_enabled: false
+
+# （可选）添加外部链接，比如文档或讨论区
+# (Optional) Add external links, e.g., to documentation or discussion forums
 contact_links:
-  - name: GitHub Discussions
-    url: https://github.com/your-org/your-repo/discussions
-    about: 请使用 GitHub Discussions 进行一般性讨论和问题咨询
-  - name: 项目文档
-    url: https://your-docs-url.com
-    about: 查看项目文档以了解更多信息
+  - name:
+      ❓ 提问或讨论 (Question or Discussion)
+      # 替换成你的仓库讨论区链接 (Replace with your repo's discussions link)
+    url: https://github.com/orgs/SystemUI-js/discussions
+    about: '提问或发起讨论，请使用 GitHub Discussions (Please use GitHub Discussions for questions or discussions.)'
+  - name:
+      📚 查看文档 (Read the Documentation)
+      # 替换成你的文档链接 (Replace with your documentation link)
+    url: https://github.com/SystemUI-js/multi-drag
+    about: '在提 Bug 之前，请先查阅我们的文档 (Please check our documentation before submitting a bug.)'

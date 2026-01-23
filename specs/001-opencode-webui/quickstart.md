@@ -1,6 +1,7 @@
 # Phase 1 Quickstart: OpenCode WebUI Monorepo
 
 ## Prerequisites
+
 - Node.js LTS
 - pnpm (recommended)
 - OpenCode Server running locally (default: http://localhost:4096)
@@ -20,8 +21,8 @@ mkdir -p OpenCode-WebUI/apps/web OpenCode-WebUI/apps/server OpenCode-WebUI/packa
 ```yaml
 # OpenCode-WebUI/pnpm-workspace.yaml
 packages:
-  - "apps/*"
-  - "packages/*"
+  - 'apps/*'
+  - 'packages/*'
 ```
 
 4. Start OpenCode Server

@@ -1,6 +1,5 @@
 ---
-
-description: "Task list for OpenCode WebUI Monorepo"
+description: 'Task list for OpenCode WebUI Monorepo'
 ---
 
 # Tasks: OpenCode WebUI Monorepo
