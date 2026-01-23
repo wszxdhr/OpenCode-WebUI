@@ -1,5 +1,5 @@
 import React from 'react'
-import type { SessionSummary } from '@sysui/shared'
+import type { SessionSummary } from '../types/shared.d.ts'
 
 interface SessionListProps {
   sessions: SessionSummary[]

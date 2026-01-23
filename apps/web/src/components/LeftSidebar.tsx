@@ -1,7 +1,7 @@
 import React from 'react'
 import { SessionList } from './SessionList'
 import { LeftNav } from './LeftNav'
-import type { Project } from '@sysui/shared'
+import type { Project } from '../types/shared.d.ts'
 
 type TabId = 'projects' | 'sessions' | 'settings'
 

@@ -1,6 +1,6 @@
 import React, { useState, FormEvent } from 'react'
 import { createHealthClient } from '../services/healthClient'
-import type { ConnectionError } from '@sysui/shared'
+import type { ConnectionError } from '../types/shared.d.ts'
 
 interface ConnectPageProps {
   onConnect: (serverUrl: string) => void

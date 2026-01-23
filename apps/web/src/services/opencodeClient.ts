@@ -2,7 +2,7 @@ import type {
   Session,
   MessageEnvelope,
   SendMessageRequest
-} from '@sysui/shared'
+} from '../types/shared.d.ts'
 
 export interface OpenCodeClient {
   connect(serverUrl: string): Promise<void>

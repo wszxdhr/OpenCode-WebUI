@@ -104,8 +104,8 @@ function App() {
             </div>
           ) : (
             <EmptyState
-              title="选择一个会话开始"
-              description="从左侧列表中选择会话来查看消息"
+              title='选择一个会话开始'
+              description='从左侧列表中选择会话来查看消息'
             />
           )
         }
@@ -113,26 +113,12 @@ function App() {
           selectedSessionId ? (
             <RightSidebar>
               <EmptyState
-                title="代码视图"
-                description="选择会话后显示相关代码文件"
+                title='代码视图'
+                description='选择会话后显示相关代码文件'
               />
             </RightSidebar>
           ) : undefined
         }
-      />
-        }
-        mainContent={
-          selectedSessionId ? (
-            <div className='session-view'>
-              <p>会话内容占位: {selectedSessionId}</p>
-            </div>
-          ) : (
-            <div className='empty-state'>
-              <p>选择一个会话开始</p>
-            </div>
-          )
-        }
-        rightSidebarContent={<RightSidebar />}
       />
     </div>
   )

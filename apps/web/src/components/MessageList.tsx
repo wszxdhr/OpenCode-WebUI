@@ -1,5 +1,5 @@
 import React from 'react'
-import type { Message } from '@sysui/shared'
+import type { Message } from '../types/shared.d.ts'
 
 interface MessageListProps {
   messages: Message[]

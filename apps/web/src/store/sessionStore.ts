@@ -5,7 +5,7 @@ import type {
   SessionSummary,
   ConnectionError,
   Message
-} from '@sysui/shared'
+} from '../types/shared.d.ts'
 import type { OpenCodeClient, MessageEnvelope } from './services/opencodeClient'
 
 export function useSessionStore(client: OpenCodeClient) {

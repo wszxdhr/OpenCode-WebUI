@@ -8,12 +8,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "allowImportingTsExtensions": false,
-    "paths": {
-      "@sysui/shared": ["../../packages/shared/src"]
-    }
+    "types": ["src/types/shared.d.ts"]
   },
-  "include": ["src"],
-  "references": [
-    { "path": "../../packages/shared" }
-  ]
+  "include": ["src"]
 }
